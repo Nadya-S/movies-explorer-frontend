@@ -1,0 +1,12 @@
+.delete-button {
+  margin-top: 5px;
+  padding: 0;  
+  width: 30px;
+  height: 30px;
+  background: url('../../../images/delete_button.svg') no-repeat;
+  border: none;
+}
+
+.delete-button:hover {
+  background: url('../../../images/delete_button_hover.svg') no-repeat;
+}

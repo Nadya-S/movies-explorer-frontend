@@ -1,0 +1,32 @@
+.more-button {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 80px auto;
+}
+
+.more-button__button {
+  width: 320px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background-color: #F9F9F9;
+  border-radius: 6px;
+  color: #000000;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+}
+
+.more-button__button:disabled {
+  color: #FFFFFF;
+  background-color: #FFFFFF;
+
+}
+
+@media screen and (max-width:560px) {
+  .more-button__button {
+    width: 240px;
+  }
+}

@@ -1,0 +1,47 @@
+.authorization-buttons {
+  height: 32px;
+}
+
+.authorization-buttons__reg {
+  border: none;
+  background-color: #A0A0A0;
+  height: 32px;
+  padding: 0;
+  margin-right: 30px;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+}
+
+.authorization-buttons__login {
+  border: none;
+  background-color: #5CD7AB;
+  border-radius: 3px;
+  width: 76px;
+  height: 32px;
+  padding: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+}
+
+@media screen and (max-width: 560px) {
+  .authorization-buttons {
+    height: 26px;
+  }
+
+  .authorization-buttons__reg {
+    height: 26px;
+    font-size: 10px;
+    margin-right: 14px;
+  }
+
+  .authorization-buttons__login {
+    height: 26px;
+    width: 54px;
+    font-size: 10px;
+  }
+}

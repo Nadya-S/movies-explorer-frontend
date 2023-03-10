@@ -1,0 +1,38 @@
+.navigation-profile {
+  margin-left: 50px;
+}
+  
+.navigation-profile__container {
+  display: flex;
+  flex-direction: row;
+}
+  
+.navigation-profile__title {
+  margin-right: 15px;
+  padding-top: 7px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+}
+  
+.navigation-profile__icon {
+  width: 26px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #F9F9F9;
+  object-fit: scale-down;
+}
+
+@media screen and (max-width:768px) {
+  .navigation-profile {
+    margin: 0 auto 92px auto;
+  }
+}
+
+@media screen and (max-width:560px) {
+  .navigation-profile {
+    margin-bottom: 48px;
+  }
+}

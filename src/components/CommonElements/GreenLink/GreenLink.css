@@ -1,0 +1,32 @@
+.green-link {
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.green-link__question {
+  color: #A0A0A0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.green-link__button {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #5CD7AB;
+  text-decoration: none;
+}
+
+@media screen and (max-width:560px) {
+  .green-link__question {
+    font-size: 12px;
+  }
+
+  .green-link__button {
+    font-size: 12px;
+  }
+}
