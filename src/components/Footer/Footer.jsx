@@ -2,7 +2,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <div className='footer__title'>
         <p className='footer__text'>Учебный проект Яндекс.Практикум х BeatFilm.</p>
       </div>
@@ -13,7 +13,7 @@ const Footer = () => {
           <a href='https://github.com/' target="_blank" className='link' rel="noreferrer">Github</a>
         </nav>
       </div>
-    </div>
+    </footer>
   )
 };
 

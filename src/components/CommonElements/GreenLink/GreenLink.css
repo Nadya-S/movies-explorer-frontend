@@ -4,6 +4,7 @@
   font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 400;
+  margin-bottom: 70px;
 }
 
 .green-link__question {
@@ -21,7 +22,17 @@
   text-decoration: none;
 }
 
+@media screen and (max-width:768px) {
+  .green-link {
+    margin-bottom: 232px;
+  }
+}
+
 @media screen and (max-width:560px) {
+  .green-link {
+    margin-bottom: 30px;
+  }
+
   .green-link__question {
     font-size: 12px;
   }

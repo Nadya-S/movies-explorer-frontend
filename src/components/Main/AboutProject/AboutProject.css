@@ -94,7 +94,12 @@
   }
 
   .about-project__column {
-    width: 319px;
+    width: auto;
+    margin-right: 35px;
+  }
+
+  .about-project__column:last-child {
+    margin-right: 0;
   }
 
   .about-project__column-title {
@@ -119,7 +124,7 @@
   }
 
   .about-project__column {
-    width: auto;
+    margin-right: 0;
     margin-bottom: 56px;
   }
 

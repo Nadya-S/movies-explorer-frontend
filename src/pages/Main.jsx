@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
+import Content from "../components/Content/Content";
 import AuthorizationButtons from "../components/AuthorizationButtons/AuthorizationButtons";
 import Promo from "../components/Main/Promo/Promo";
 import AboutProject from '../components/Main/AboutProject/AboutProject';
@@ -12,11 +13,13 @@ const Main = () => {
   return (
     <div>
       <Header><AuthorizationButtons /></Header>
-      <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
+      <Content>
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </Content>
       <Footer />
     </div>
   )

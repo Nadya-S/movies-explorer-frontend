@@ -37,8 +37,9 @@
   outline: none;
 }
 
-.search-form__input:hover {
+.search-form__input:focus {
   border-bottom: 1px solid #5CD7AB;
+  outline: 1px solid #b1a4a4;
 }
 
 .search-form__button {

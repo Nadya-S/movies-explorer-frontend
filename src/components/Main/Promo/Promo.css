@@ -37,6 +37,7 @@
   }
 
   .promo__title {
+    max-width: 680px;
     text-align: center;
   }
 

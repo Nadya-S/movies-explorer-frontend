@@ -3,10 +3,10 @@ import Header from "../../components/Header/Header";
 import Navigation from '../../components/Navigation/Navigation';
 import GreenLink from '../../components/CommonElements/GreenLink/GreenLink';
 
-const Profile = ({name, email}) => {
+const Profile = ({name, email, onPopupEditProfile, onPopupNavigation}) => {
   return (
     <div className='profile'>
-      <Header><Navigation /></Header>
+      <Header><Navigation onPopupNavigation={onPopupNavigation}/></Header>
       <h2 className='profile__title'>Привет, {name}!</h2>
       <div className='profile__fields'>
         <div className='profile__field'>
@@ -18,7 +18,7 @@ const Profile = ({name, email}) => {
           <p className='profile__field-value'>{email}</p>
         </div>
       </div>
-      <button className='profile__edit-button'>Редактировать</button>
+      <button className='profile__edit-button' onClick={onPopupEditProfile}>Редактировать</button>
       <GreenLink question='' path='/signin' text='Выйти из аккаунта'/>
     </div>
   )

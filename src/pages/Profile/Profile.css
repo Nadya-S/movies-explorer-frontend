@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   color: #000000;
-  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif
 }
 
 .profile__title {
@@ -65,6 +65,10 @@
 }
 
 @media screen and (max-width:768px) {
+  .profile {
+    margin-bottom: 37px;
+  }
+
   .profile__title {
     margin-top: 237px;
   }
@@ -76,6 +80,10 @@
 }
 
 @media screen and (max-width:560px) {
+  .profile {
+    margin-bottom: 10px;
+  }
+
   .profile__title {
     width: 260px;
     margin-top: 70px;

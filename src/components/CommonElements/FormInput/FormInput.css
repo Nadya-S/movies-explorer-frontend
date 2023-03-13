@@ -17,17 +17,18 @@
   margin-bottom: 24px;
   border-bottom: 1px solid #E8E8E8;
   font-size: 14px;
-  outline:none;
   font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
-}
-
-.popup__input_type_error {
-  color: #FF6838;
 }
 
 .form-input__input:focus {
   border-bottom: 1px solid #5CD7AB;
+  outline: 1px solid rgb(141, 141, 139);
 }
+
+.form-input__input:invalid {
+  border-bottom: 1px solid #E8E8E8;
+  color: #FF6838;
+} 
 
 .form-input__input-error {
   position: absolute;
