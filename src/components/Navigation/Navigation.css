@@ -1,0 +1,39 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+}
+
+.navigation__menu-button {
+  display: none;
+  margin-top: -6px;
+  width: 44px;
+  height: 44px;
+  background: url('../../images/menu.svg') no-repeat;
+  border: none;
+  padding: 0;
+}
+
+.navigation__container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width:768px) {
+  .navigation__menu-button {
+    display: block;
+  }
+
+  .navigation__container {
+    display: none;
+  }
+}
+
+@media screen and (max-width:560px) {
+  .navigation {
+    margin-top: -4px;
+    width: 40px;
+    height: 43px;
+    background-size: 90%;
+  }
+}

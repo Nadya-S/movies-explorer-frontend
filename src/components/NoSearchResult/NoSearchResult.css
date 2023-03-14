@@ -1,0 +1,12 @@
+.no-search-result {
+  margin: 200px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.no-search-result__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #A0A0A0;
+}

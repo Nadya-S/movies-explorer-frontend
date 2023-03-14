@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #A0A0A0;
+}
+
+.header__logo {
+  margin: 18px 70px;
+  height: 38px;
+}
+
+.header__navigation {
+  margin: 21px 70px 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo {
+    margin-left: 30px;
+  }
+
+  .header__navigation {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .header__logo {
+    margin-left: 14px;
+  }
+
+  .header__navigation {
+    margin-top: 24px;
+    margin-right: 14px;
+  }
+}
