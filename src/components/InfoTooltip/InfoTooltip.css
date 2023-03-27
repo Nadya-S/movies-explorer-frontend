@@ -1,4 +1,4 @@
-.popup-edit-profile {
+.popup-info {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,26 +10,26 @@
   opacity: 0;
   display: flex;
 }
-
-.popup-edit-profile_opened {
+  
+.popup-info_opened {
   display: flex;
   transition: visibility 1s, opacity 1s, transform 2s;
   visibility: visible;
   opacity: 1;
 }
 
-.popup-edit-profile__container {
+.popup-info__container {
   display: flex;
   flex-direction: column;
   margin: auto;
   padding: 0 30px;
   background-color: #FFFFFF;
   width: 450px;
-  height: 350px;
+  height: 150px;
   border-radius: 10px;
 }
 
-.popup-edit-profile__button-close {
+.popup-info__button-close {
   background: url('../../images/button_close.svg') no-repeat;
   background-position: center;
   padding: 0;
@@ -39,47 +39,25 @@
   border: none;
 }
 
-.popup-edit-profile__title {
-  margin: 0 auto 30px auto;
+.popup-info__title {
+  text-align: center;
+  margin: 20px auto 0 auto;
   font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
   font-style: normal;
   font-weight: 500;
-}
-
-.popup-edit-profile__button-save {
-  margin: 20px auto;
-  height: 45px;
-  width: 390px;
-  padding: 0;
-  border: none;
-  background: #5CD7AB;
-  border-radius: 3px;
-  color: #FFFFFF;
-  font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-}
-
-.popup-edit-profile__button-save:disabled {
-  background-color: #C2C2C2;
 }
 
 @media screen and (max-width: 560px) {
-  .popup-edit-profile__container {
+  .popup-info__container {
     padding: 0 15px;
-    height: 320px;
+    height: 150px;
   }
 
-  .popup-edit-profile__button-close {
+  .popup-info__button-close {
     background-size: 90%;
   }
 
-  .popup-edit-profile__button-save {
-    width: 260px;
-    font-size: 12px;
-  }
-
-  .popup-edit-profile__title {
+  .popup-info__title {
     font-size: 18px;
   }
 }

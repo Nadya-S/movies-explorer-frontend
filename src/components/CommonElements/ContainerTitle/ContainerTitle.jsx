@@ -1,12 +1,12 @@
 import React from "react";
-import './ContainerTitle.css';
+import "./ContainerTitle.css";
 
-const ContainerTitle = ({title}) => {
+const ContainerTitle = ({ title }) => {
   return (
-    <div className='container-title'>
-      <h2 className='title'>{title}</h2>
+    <div className="container-title">
+      <h2 className="title">{title}</h2>
     </div>
-  )
-}
+  );
+};
 
 export default ContainerTitle;

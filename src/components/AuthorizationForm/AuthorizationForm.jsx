@@ -6,6 +6,8 @@ const AuthorizationForm = ({
   title,
   children,
   buttonText,
+  handleSubmit,
+  error
 }) => {
   return (
     <section className="authorization">
@@ -13,10 +15,10 @@ const AuthorizationForm = ({
         <LogoLink />
       </div>
       <h2 className="authorization__title">{title}</h2>
-      <form className="authorization__form">{children}</form>
-      <button className="button authorization__button" type="submit">
+      <form className="authorization__form" noValidate onSubmit={handleSubmit}>{children}
+      <button disabled={error} className="button authorization__button" type="submit">
         {buttonText}
-      </button>
+      </button></form>
   </section>
   );
 };

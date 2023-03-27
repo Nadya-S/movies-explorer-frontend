@@ -18,19 +18,24 @@
 .authorization__form {
   display: flex;
   flex-direction: column;
-  height: 266px;
+  height: 396px;
 }
 
 .authorization__button {
   width: 396px;
   height: 45px;
-  margin: 66px auto 16px auto;
+  margin: auto auto 16px auto;
+  padding: 0;
   background-color: #5CD7AB;
   border-radius: 3px;
   color: #FFFFFF;
   border: none;
   font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
   font-size: 14px;
+}
+
+.authorization__button:disabled {
+  background-color: #C2C2C2;
 }
 
 @media screen and (max-width:768px) {
@@ -57,11 +62,12 @@
   }
 
   .authorization__form {
-    height: 356px;
+    height: 482px;
   }
 
   .authorization__button {
     width: 260px;
     font-size: 12px;
+    margin-bottom: 14px;
   }
 }
