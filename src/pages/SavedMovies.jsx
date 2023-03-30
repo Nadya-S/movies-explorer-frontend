@@ -7,7 +7,6 @@ import Header from "../components/Header/Header";
 import Content from "../components/Content/Content";
 import Navigation from "../components/Navigation/Navigation";
 import SearchForm from "../components/SearchForm/SearchForm";
-import Preloader from "../components/Preloader/Preloader";
 import Footer from "../components/Footer/Footer";
 import MoviesCardList from "../components/MoviesCardList/MoviesCardList";
 import MoreButton from "../components/MoreButton/MoreButton";
@@ -17,44 +16,20 @@ const SavedMovies = ({ onPopupNavigation, setErrorReq }) => {
   const currentUser = useContext(CurrentUserContext);
   const userId = currentUser._id;
   const [myCards, setMyCards] = useState(
-    MyLocalStorage.getItem(`myCards${userId}`) || []
+    MyLocalStorage.getItem(`initialMyCards${userId}`) || []
   );
   const [deleteCardButton, setDeleteCardButton] = useState(true);
   const [searchText, setSearchText] = useState("");
   const [noSearchResult, setNoSearchResult] = useState(false);
   const [isShort, setIsShort] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [serverError, setServerError] = useState(false);
-
-  const setGetCardError = () => {
-    setIsLoading(false);
-    setServerError(true);
-  };
 
   useEffect(() => {
     if (myCards.length === 0 && userId) {
-      setSearchText(MyLocalStorage.getItem(`searchTextMyCard${userId}`));
-      setIsShort(MyLocalStorage.getItem(`isShortMyCard${userId}`));
-      setIsLoading(true);
-      setServerError(false);
-
-      MainApi.getMyCards()
-        .then((cards) => {
-          setIsLoading(false);
-          MyLocalStorage.setItem(`myCards${userId}`, cards);
-          setMyCards(cards);
-        })
-        .catch((err) => {
-          setGetCardError();
-          console.error(`Ошибка: ${err}`);
-        });
+      setMyCards(MyLocalStorage.getItem(`initialMyCards${userId}`));
     }
   }, [userId]);
 
   const filterMyCard = (searchText, isShort) => {
-    MyLocalStorage.setItem(`isShortMyCard${userId}`, isShort);
-    MyLocalStorage.setItem(`searchTextMyCard${userId}`, searchText);
-
     const filteredCards = filterCards(
       MyLocalStorage.getItem(`initialMyCards${userId}`),
       searchText,
@@ -95,12 +70,12 @@ const SavedMovies = ({ onPopupNavigation, setErrorReq }) => {
           searchText={searchText}
           setSearchText={setSearchText}
         />
-        {isLoading && <Preloader />}
+        {/* {isLoading && <Preloader />} */}
         {noSearchResult ? (
           <NoSearchResult />
         ) : (
           <MoviesCardList
-            serverError={serverError}
+            // serverError={serverError}
             cards={myCards}
             deleteCardButton={deleteCardButton}
             deleteMyCard={deleteMyCard}

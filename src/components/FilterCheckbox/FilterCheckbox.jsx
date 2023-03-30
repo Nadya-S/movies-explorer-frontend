@@ -1,15 +1,11 @@
 import "./FilterCheckbox.css";
-import { useContext } from "react";
-import { CurrentUserContext } from "../../context/CurrentUserContext";
-import MyLocalStorage from "../../utils/MyLocalStorage";
 
-const FilterCheckbox = ({ setIsShort, isShort, getCardsList }) => {
-  const currentUser = useContext(CurrentUserContext);
+const FilterCheckbox = ({ setIsShort, isShort, getCardsList, searchText }) => {
 
   const handleClick = (e) => {
     setIsShort(e.target.checked);
     getCardsList(
-      MyLocalStorage.getItem(`searchText${currentUser._id}`),
+      searchText,
       e.target.checked
     );
   };

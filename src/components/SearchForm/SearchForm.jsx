@@ -58,6 +58,7 @@ const SearchForm = ({
           </div>
         </div>
         <FilterCheckbox
+          searchText={searchText}
           isShort={isShort}
           setIsShort={setIsShort}
           getCardsList={getCardsList}
