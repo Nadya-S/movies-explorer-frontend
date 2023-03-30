@@ -4,6 +4,7 @@ import { CurrentUserContext } from "../context/CurrentUserContext";
 const useValidation = (value, validations) => {
   const [errorMessage, setErrorMessage] = useState("");
   const [error, setError] = useState(false);
+  const [isChanged, setIsChanged] = useState(false);
   const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
@@ -54,14 +55,20 @@ const useValidation = (value, validations) => {
             break;
           case "isSameName":
             if (value === currentUser.name) {
+              setIsChanged(false);
               setError(true);
               setErrorMessage("Поле осталось прежним");
+            } else {
+              setIsChanged(true);
             }
             break;
           case "isSameEmail":
             if (value === currentUser.email) {
+              setIsChanged(false);
               setError(true);
               setErrorMessage("Поле осталось прежним");
+            } else {
+              setIsChanged(true);
             }
             break;
           default:
@@ -75,6 +82,8 @@ const useValidation = (value, validations) => {
     error,
     errorMessage,
     setError,
+    isChanged,
+    setIsChanged
   };
 };
 

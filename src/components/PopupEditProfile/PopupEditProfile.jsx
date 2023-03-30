@@ -1,12 +1,12 @@
 import "./PopupEditProfile.css";
-import React, { useEffect } from "react";
-import { useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
 import useInput from "../../hooks/useInput";
 import FormInput from "../CommonElements/FormInput/FormInput";
 
 const PopupEditProfile = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
   const currentUser = useContext(CurrentUserContext);
+  const [isValid, setIsValid] = useState(false);
 
   const name = useInput("", {
     isEmpty: true,
@@ -26,6 +26,14 @@ const PopupEditProfile = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
   const handleClick = () => {
     onClose();
   };
+ 
+  useEffect(() => {
+    if((name.isChanged && !name.error && !email.isChanged) || (email.isChanged && !email.error && !name.isChanged)) {
+      setIsValid(true);
+    } else {
+      setIsValid(false)
+    }
+  }, [name.isChanged, email.isChanged, name.error, email.error])
 
   useEffect(() => {
     if (isOpen) {
@@ -35,6 +43,8 @@ const PopupEditProfile = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
       email.setError(true);
       name.setDirty(false);
       email.setDirty(false);
+      name.setIsChanged(false);
+      email.setIsChanged(false);
     }
   }, [isOpen]);
 
@@ -80,7 +90,7 @@ const PopupEditProfile = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
         <button
           className="button popup-edit-profile__button-save"
           type="submit"
-          disabled={name.error || email.error}
+          disabled={(name.error || email.error) && !isValid}
         >
           {isLoading ? "Сохранение..." : "Сохранить изменения"}
         </button>
