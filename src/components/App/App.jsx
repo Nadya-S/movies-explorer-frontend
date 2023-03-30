@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import { useState } from "react";
 import { CurrentUserContext } from "../../context/CurrentUserContext";
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory, Redirect } from "react-router-dom";
 import Auth from "../../utils/Auth";
 import MainApi from "../../utils/MainApi";
 import Main from "../../pages/Main";
@@ -165,10 +165,10 @@ const App = () => {
               />
             </Route>
             <Route path="/signin">
-              <Login onLogin={handleLogin} />
+              {!loggedIn ? <Login onLogin={handleLogin} /> : <Redirect to="./" />}
             </Route>
             <Route path="/signup">
-              <Register onRegister={handleRegister} />
+              {!loggedIn ? <Register onRegister={handleRegister} /> : <Redirect to="./" />}
             </Route>
             <Route path="*">
               <NotFound />
