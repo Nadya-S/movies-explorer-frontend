@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import Navigation from "../../components/Navigation/Navigation";
 
 const Profile = ({
+  setCurrentUser,
   name,
   email,
   onPopupEditProfile,
@@ -10,7 +11,8 @@ const Profile = ({
   setLoggedIn,
 }) => {
   const onSignOut = () => {
-    localStorage.removeItem("token");
+    localStorage.clear();
+    setCurrentUser({});
     setLoggedIn(false);
   };
 

@@ -149,6 +149,7 @@ const App = () => {
             />
             <ProtectedRoute
               path="/profile"
+              setCurrentUser={setCurrentUser}
               loggedIn={loggedIn}
               setLoggedIn={setLoggedIn}
               component={Profile}
