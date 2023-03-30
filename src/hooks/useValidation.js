@@ -7,6 +7,13 @@ const useValidation = (value, validations) => {
   const currentUser = useContext(CurrentUserContext);
 
   useEffect(() => {
+    if (!value) {
+      setError(true);
+      setErrorMessage("Поле не может быть пустым");
+    } else {
+      setError(false);
+    }
+
     if (value) {
       for (const validation in validations) {
         switch (validation) {
@@ -24,14 +31,6 @@ const useValidation = (value, validations) => {
               setErrorMessage(
                 `В поле должно быть не более ${validations[validation]} символов`
               );
-            }
-            break;
-          case "isEmpty":
-            if (!value) {
-              setError(true);
-              setErrorMessage("Поле не может быть пустым");
-            } else {
-              setError(false);
             }
             break;
           case "isEmail":

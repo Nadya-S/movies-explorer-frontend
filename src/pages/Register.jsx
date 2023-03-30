@@ -5,13 +5,11 @@ import GreenLink from "../components/CommonElements/GreenLink/GreenLink";
 
 const Register = ({ onRegister }) => {
   const name = useInput("", {
-    isEmpty: true,
     isName: true,
     minLength: 2,
     maxLength: 30,
   });
   const email = useInput("", {
-    isEmpty: true,
     isEmail: true,
     minLength: 4,
     maxLength: 30,

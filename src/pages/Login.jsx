@@ -5,12 +5,11 @@ import GreenLink from "../components/CommonElements/GreenLink/GreenLink";
 
 const Login = ({ onLogin }) => {
   const email = useInput("", {
-    isEmpty: true,
     isEmail: true,
     minLength: 4,
     maxLength: 30,
   });
-  const password = useInput("", { isEmpty: true, minLength: 6, maxLength: 30 });
+  const password = useInput("", { minLength: 6, maxLength: 30 });
 
   const handleSubmit = (e) => {
     e.preventDefault();
