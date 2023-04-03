@@ -64,11 +64,20 @@
   color: #A0A0A0;
 }
 
-@media screen and (max-width:768px) {
-  .profile {
-    margin-bottom: 37px;
-  }
+.profile__logout-button {
+  border: none;
+  background-color: #FFFFFF;
+  padding: 0;
+  margin-bottom: 70px;
+  /* margin: 0 auto; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #5CD7AB;
+}
 
+@media screen and (max-width:768px) {
   .profile__title {
     margin-top: 237px;
   }
@@ -77,13 +86,13 @@
     margin-top: 96px;
     margin-bottom: 193px;
   }
+
+  .profile__logout-button {
+    margin-bottom: 232px;
+  }
 }
 
 @media screen and (max-width:560px) {
-  .profile {
-    margin-bottom: 10px;
-  }
-
   .profile__title {
     width: 260px;
     margin-top: 70px;
@@ -96,6 +105,11 @@
   }
 
   .profile__edit-button {
+    font-size: 12px;
+  }
+
+  .profile__logout-button {
+    margin-bottom: 30px;
     font-size: 12px;
   }
 }

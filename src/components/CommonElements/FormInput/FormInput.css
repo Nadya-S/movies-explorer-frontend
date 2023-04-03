@@ -25,12 +25,12 @@
   outline: 1px solid rgb(141, 141, 139);
 }
 
-.form-input__input:invalid {
+.form-input__input-error {
   border-bottom: 1px solid #E8E8E8;
   color: #FF6838;
 } 
 
-.form-input__input-error {
+.form-input__error {
   position: absolute;
   top: 50px;
   left: 0;
@@ -43,6 +43,6 @@
   color: #FF6838;
 }
 
-.form-input__input-error_active {
+.form-input__error_active {
   opacity: 1;
 }
